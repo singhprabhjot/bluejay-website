@@ -296,6 +296,7 @@ a:focus {
 }
 .logo {
     margin-top: 17px;
+    max-width: 20%;
 }
 .main-menu .submenu li a {
     padding: 10px 15px 10px 0px;
@@ -1637,6 +1638,7 @@ mobile menu
   padding: 60px 0;
 }
 .footer-logo{
+  max-width: 20%;
   margin-bottom: 30px;
 }
 .social li a {
