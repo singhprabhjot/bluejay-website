@@ -1,6 +1,5 @@
 (function ($) {
   "use strict";
-
   // Parallax background
   function bgParallax() {
     if ($(".parallax").length) {
@@ -100,86 +99,53 @@
   /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
-    async function sendMail(){
-      var params = {
-        from_name : document.getElementById("name").value,
-        contact : document.getElementById("phone").value,
-        to_name : "BlueJay Delivery",
-        message : document.getElementById("note").value,
-        email : document.getElementById("email").value
-      }
+    emailjs.init("PFrK-8QIoGZfrKmjr");
 
+    $("#contact-form").validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        email: "required",
+        phone: "required",
+        address: "required"
+      },
+      messages: {
+        name: "Please enter your name",
+        email: "Please enter your email address",
+        phone: "Please enter your phone number",
+        address: "Please enter your address"
+      },
+      submitHandler: function(form) {
+        sendMail(event);
+      }
+    });
+  
+    async function sendMail(event) {
+      event.preventDefault();
+      var params = {
+        from_name: document.getElementById("name").value,
+        contact: document.getElementById("phone").value,
+        to_name: "BlueJay Delivery",
+        message: document.getElementById("note").value,
+        email: document.getElementById("email").value
+      };
       const serviceID = "service_v4w2fyk";
       const templateID = "template_95mkaaa";
-
-      await emailjs.send(serviceID,templateID,params)
-      .then(
-        (res) => {
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("phone").value = "";
-          console.log(res);
-          alert("Your email reached us. Thanks")
-        }
-      )
-      .catch(err =>{
+  
+      try {
+        const res = await emailjs.send(serviceID, templateID, params);
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("note").value = "";
+        console.log(res);
+        alert("Your email reached us. Thanks");
+      } catch (err) {
         console.log(err);
-      })
-    }
-
-    
-
-    if ($("#contact-form").length) {
-        $("#contact-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-
-                email: "required",
-
-                phone: "required",
-
-                address: "required",
-            },
-
-            messages: {
-                name: "Please enter your name",
-                email: "Please enter your email address",
-                phone: "Please enter your phone number",
-                address: "Please enter your address",
-            },
-
-            submitHandler: async function (form) {
-                const formData =$(form).serialize();
-                console.log(formData);
-
-                // await sendMail();
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
-
-        });
+      }
     }
 
   /*------------------------------------------

@@ -894,34 +894,34 @@
                          <h5>Fill out our online form, and a member of our team will get back to you promptly.</h5>
  
                          <div class="contact-form">
-                             <form class="contact-validation-active" id="contact-form" >
-                                 <div class="half-col">
-                                     <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
-                                 </div>
-                                 <div class="half-col">
-                                     <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
-                                 </div>
-                                 <div class="half-col">
-                                     <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
-                                 </div>
-                                 <div class="half-col">
-                                     <input type="text" name="address" id="address" class="form-control" placeholder="Address">
-                                 </div>
-                                 <div>
-                                     <textarea class="form-control" name="note"  id="note" placeholder="Case Description..."></textarea>
-                                 </div>
-                                 <div class="submit-btn-wrapper">
-                                     <button type="submit" class="theme-btn-s3">Send</button>
-                                     <div id="loader">
-                                         <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-                                     </div>
-                                 </div>
-                                 <div class="clearfix error-handling-messages">
-                                     <div id="success">Thank you</div>
-                                     <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                 </div>
-                             </form>
-                         </div>
+                            <form class="contact-validation-active" id="contact-form" onsubmit="sendMail(event)">
+                              <div class="half-col">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+                              </div>
+                              <div class="half-col">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                              </div>
+                              <div class="half-col">
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                              </div>
+                              <div class="half-col">
+                                <input type="text" name="address" id="address" class="form-control" placeholder="Address">
+                              </div>
+                              <div>
+                                <textarea class="form-control" name="note" id="note" placeholder="Case Description..."></textarea>
+                              </div>
+                              <div class="submit-btn-wrapper">
+                                <button type="submit" class="theme-btn-s3">Send</button>
+                                <div id="loader">
+                                  <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                                </div>
+                              </div>
+                              <div class="clearfix error-handling-messages">
+                                <div id="success">Thank you</div>
+                                <div id="error">Error occurred while sending email. Please try again later.</div>
+                              </div>
+                            </form>
+                          </div>
                      </div>
                  </div>
              </div>
@@ -1013,7 +1013,8 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </body>
 
 </html>
