@@ -1,5 +1,7 @@
 (function ($) {
   "use strict";
+
+  require('dotenv').config();
   // Parallax background
   function bgParallax() {
     if ($(".parallax").length) {
@@ -99,8 +101,6 @@
   /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
-    emailjs.init("PFrK-8QIoGZfrKmjr");
-
     $("#contact-form").validate({
       rules: {
         name: {
@@ -121,6 +121,34 @@
         sendMail(event);
       }
     });
+    
+    async function sendMail(event) {
+      event.preventDefault();
+      var params = {
+        from_name: document.getElementById("name").value,
+        contact: document.getElementById("phone").value,
+        to_name: "BlueJay Delivery",
+        message: document.getElementById("note").value,
+        email: document.getElementById("email").value
+      };
+      const serviceID = "service_09mt6sp";
+      const templateID = "template_e38g3uu";
+      const emailjsUserID = "amOuNkktospDYLyfn";
+    
+      try {
+        emailjs.init(emailjsUserID);
+        const res = await emailjs.send(serviceID, templateID, params);
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("note").value = "";
+        console.log(res);
+        alert("Your email reached us. Thanks");
+      } catch (err) {
+        console.log(err);
+      }
+    }
   
     async function sendMail(event) {
       event.preventDefault();
