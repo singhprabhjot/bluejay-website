@@ -56,8 +56,6 @@
     var scroll = $(window).scrollTop(),
       mainHeader = $("#sticky-header"),
       mainHeaderHeight = mainHeader.innerHeight();
-
-    // console.log(mainHeader.innerHeight());
     if (scroll > 1) {
       $("#sticky-header").addClass("sticky");
     } else {
@@ -141,33 +139,6 @@
         document.getElementById("phone").value = "";
         document.getElementById("address").value = "";
         document.getElementById("note").value = "";
-        console.log(res);
-        alert("Your email reached us. Thanks");
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  
-    async function sendMail(event) {
-      event.preventDefault();
-      var params = {
-        from_name: document.getElementById("name").value,
-        contact: document.getElementById("phone").value,
-        to_name: "BlueJay Delivery",
-        message: document.getElementById("note").value,
-        email: document.getElementById("email").value
-      };
-      const serviceID = "service_v4w2fyk";
-      const templateID = "template_95mkaaa";
-  
-      try {
-        const res = await emailjs.send(serviceID, templateID, params);
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("phone").value = "";
-        document.getElementById("address").value = "";
-        document.getElementById("note").value = "";
-        console.log(res);
         alert("Your email reached us. Thanks");
       } catch (err) {
         console.log(err);
