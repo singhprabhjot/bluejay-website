@@ -1,7 +1,5 @@
 (function ($) {
   "use strict";
-
-  require('dotenv').config();
   // Parallax background
   function bgParallax() {
     if ($(".parallax").length) {
