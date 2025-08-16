@@ -8,9 +8,25 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
   <style>
+    :root{
+      --logo-h: 36px;       /* default header logo height */
+      --logo-h-md: 44px;    /* header logo on md+ */
+      --footer-logo-h: 28px;/* footer logo height */
+    }
+    /* HERO + CARDS */
     .hero-careers{background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)),url('assets/images/slider/1.jpg') center/cover no-repeat; color:#fff}
-    .job-card{border-radius:16px; box-shadow:0 6px 24px rgba(0,0,0,.08);}
+    .job-card{border-radius:16px; box-shadow:0 6px 24px rgba(0,0,0,.08);} 
     .apply-btn{min-width:160px}
+
+    /* LOGO SIZING FIX */
+    .logo-img{height:var(--logo-h); width:auto; max-width:200px; object-fit:contain; display:block}
+    @media (min-width:768px){
+      .logo-img{height:var(--logo-h-md)}
+    }
+    .footer-logo{height:var(--footer-logo-h); width:auto; max-width:180px; object-fit:contain}
+
+    /* Ensure the header doesn't stretch vertically due to image sizing */
+    header .container{min-height:56px}
   </style>
 </head>
 <body>
@@ -28,7 +44,7 @@
   <section class="hero-careers py-5">
     <div class="container py-4">
       <h1 class="display-5 fw-bold">Join Bluejay Delivery</h1>
-      <p class="lead">Explore our open roles and apply on Smart Recruiters.</p>
+      <p class="lead">Explore our open roles and apply on SmartRecruiters.</p>
     </div>
   </section>
 
@@ -47,7 +63,7 @@
               <h3 class="h4 mb-2"><a href="job-helpers.html">Helpers</a></h3>
               <p class="text-muted mb-0">Fremont, CA • Full‑time / Part‑time</p>
             </div>
-            <a href="https://www.indeed.com/q-Bluejay-Delivery-Helper-jobs.html" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0">Apply on Indeed</a>
+            <a href="https://www.indeed.com/q-Bluejay-Delivery-Helper-jobs.html" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on Indeed</a>
           </div>
         </div>
 
@@ -58,7 +74,7 @@
               <h3 class="h4 mb-2"><a href="job-dot-driver-fremont.html">DOT Box Truck Drivers — Fremont</a></h3>
               <p class="text-muted mb-0">Fremont, CA • Full‑time</p>
             </div>
-            <a href="https://www.indeed.com/q-Bluejay-Delivery-DOT-Box-Truck-Driver-jobs.html" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0">Apply on SmartRecruiters</a>
+            <a href="https://www.smartrecruiters.com/" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on SmartRecruiters</a>
           </div>
         </div>
 
@@ -67,9 +83,9 @@
           <div class="job-card p-4 bg-white d-flex flex-column flex-md-row justify-content-between align-items-start">
             <div>
               <h3 class="h4 mb-2"><a href="job-dot-driver-lathrop.html">DOT Box Truck Drivers — Lathrop</a></h3>
-              <p class="text-muted mb-0">Latrop, CA • Full‑time</p>
+              <p class="text-muted mb-0">Lathrop, CA • Full‑time</p>
             </div>
-            <a href="https://www.indeed.com/q-Bluejay-Delivery-DOT-Driver-jobs.html" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0">Apply on SmartRecruiters</a>
+            <a href="https://www.smartrecruiters.com/" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on SmartRecruiters</a>
           </div>
         </div>
 
@@ -80,7 +96,7 @@
               <h3 class="h4 mb-2"><a href="job-van-driver.html">Van Drivers</a></h3>
               <p class="text-muted mb-0">Fremont, CA • Full‑time / Part‑time</p>
             </div>
-            <a href="https://www.indeed.com/q-Bluejay-Delivery-Van-Driver-jobs.html" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0">Apply on SmartRecruiters</a>
+            <a href="https://www.smartrecruiters.com/" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on SmartRecruiters</a>
           </div>
         </div>
 
@@ -101,11 +117,10 @@
   <!-- Footer -->
   <footer class="border-top py-3">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-      <a href="index.html" aria-label="Bluejay Delivery Home"><img src="assets/images/logo/logo.png" alt="Bluejay Delivery" class="logo-img" /></a>
+      <a href="index.html" aria-label="Bluejay Delivery Home"><img src="assets/images/logo/logo.png" alt="Bluejay Delivery" class="footer-logo" /></a>
       <span class="text-muted">© <script>document.write(new Date().getFullYear())</script> Bluejay Delivery</span>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
