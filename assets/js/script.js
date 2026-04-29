@@ -125,7 +125,9 @@
         contact: document.getElementById("phone").value,
         to_name: "BlueJay Delivery",
         message: document.getElementById("note").value,
-        email: document.getElementById("email").value
+        email: document.getElementById("email").value,
+        sms_consent_status: document.getElementById("sms_consent").checked ? "Yes" : "No"
+
       };
       const serviceID = "service_09mt6sp";
       const templateID = "template_e38g3uu";
@@ -139,7 +141,7 @@
         document.getElementById("phone").value = "";
         document.getElementById("address").value = "";
         document.getElementById("note").value = "";
-        alert("Your email reached us. Thanks");
+        alert("Thanks for sending the message.");
       } catch (err) {
         console.log(err);
       }
