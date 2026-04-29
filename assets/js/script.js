@@ -132,7 +132,6 @@
       const serviceID = "service_09mt6sp";
       const templateID = "template_e38g3uu";
       const emailjsUserID = "amOuNkktospDYLyfn";
-    
       try {
         emailjs.init(emailjsUserID);
         const res = await emailjs.send(serviceID, templateID, params);
