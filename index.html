@@ -295,9 +295,9 @@
                 </div>
                 <div class="sms-consent">
                   <label for="sms_consent">
-                    <input type="checkbox" name="sms_consent" id="sms_consent" value="yes" />
-                    <span>By checking this box, I consent to receive conversational SMS messages from Bluejay Delivery LLC related to my inquiry, service request, scheduling, follow up questions, customer support, and delivery related communication. Reply STOP to opt out. Reply HELP for support. Message and data rates may apply. Messaging frequency may vary. Visit our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="privacy.html#sms-terms" target="_blank" rel="noopener">SMS Terms and Conditions</a>.</span>
-                  </label>
+                    <input type="checkbox" name="sms_consent" id="sms_consent" value="yes" aria-describedby="sms-consent-text" />
+                    <span id="sms-consent-text">I consent to receive conversational SMS from Bluejay Delivery LLC about my inquiry or service request. Reply STOP to opt out, HELP for support. Message/data rates may apply. Frequency may vary. See our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="privacy.html#sms-terms" target="_blank" rel="noopener">SMS Terms</a>.</span>                  </label>
+                  <input type="hidden" name="sms_consent_status" id="sms_consent_status" value="No" />
                 </div>
                 <div class="submit-btn-wrapper">
                   <button type="submit" class="theme-btn-s3">Send</button>
@@ -385,10 +385,26 @@
       }
       initNav();
 
-      // Contact form ARIA feedback toggles (example; keep your sendMail implementation)
+      // Keep SMS consent optional, but always send its status with the form.
       const form = d.getElementById('contact-form');
+      const smsConsent = d.getElementById('sms_consent');
+      const smsConsentStatus = d.getElementById('sms_consent_status');
+
+      function updateSmsConsentStatus(){
+        if (!smsConsentStatus || !smsConsent) return;
+        smsConsentStatus.value = smsConsent.checked ? 'Yes' : 'No';
+      }
+
+      if (smsConsent) {
+        smsConsent.checked = false;
+        smsConsent.addEventListener('change', updateSmsConsentStatus);
+        updateSmsConsentStatus();
+      }
+
+      // Contact form ARIA feedback toggles (example; keep your sendMail implementation)
       if (form) {
         form.addEventListener('submit', function(){
+          updateSmsConsentStatus();
           const success = d.getElementById('success');
           const error = d.getElementById('error');
           if (success) success.hidden = false;
