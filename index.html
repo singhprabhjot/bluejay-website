@@ -54,6 +54,10 @@
     .hero { margin-top: 0; }
     /* Accessible focus outlines */
     a:focus, button:focus { outline: 2px dashed #333; outline-offset: 2px; }
+    .sms-consent { margin: 16px 0 8px; font-size: 14px; line-height: 1.5; color: #333; }
+    .sms-consent label { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; }
+    .sms-consent input[type="checkbox"] { margin-top: 4px; flex: 0 0 auto; }
+    .sms-consent a { text-decoration: underline; }
     /* Lazy images default */
     img[loading="lazy"]{ background:#f6f7f9; }
   </style>
@@ -288,6 +292,12 @@
                 <div>
                   <label for="note" class="visually-hidden">Case Description</label>
                   <textarea class="form-control" name="note" id="note" placeholder="Case Description..." rows="5"></textarea>
+                </div>
+                <div class="sms-consent">
+                  <label for="sms_consent">
+                    <input type="checkbox" name="sms_consent" id="sms_consent" value="yes" />
+                    <span>By checking this box, I consent to receive conversational SMS messages from Bluejay Delivery LLC related to my inquiry, service request, scheduling, follow up questions, customer support, and delivery related communication. Reply STOP to opt out. Reply HELP for support. Message and data rates may apply. Messaging frequency may vary. Visit our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="privacy.html#sms-terms" target="_blank" rel="noopener">SMS Terms and Conditions</a>.</span>
+                  </label>
                 </div>
                 <div class="submit-btn-wrapper">
                   <button type="submit" class="theme-btn-s3">Send</button>
