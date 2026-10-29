@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/images/icon.png" type="image/png" />
+
+  <title>Apply — Bluejay Delivery</title>
+  <meta name="description" content="Apply to drive with Bluejay Delivery in Fremont or Tracy, CA. Box truck drivers up to $28/hr, CDV/Sprinter van drivers $27/hr, helpers $22/hr. Takes two minutes." />
+  <link rel="canonical" href="https://bluejaydsp.com/apply.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/site.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Bluejay Delivery home">
+        <img src="assets/images/logo/logo.png" alt="Bluejay Delivery" width="160" height="46" />
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="careers.html" aria-current="page">Careers</a></li>
+          <li><a href="index.html#contact" class="btn btn-primary">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Careers</span>
+        <h1>Apply in two minutes</h1>
+        <p>Tell us who you are and which seat you want — we'll call you back, usually within one business day. Prefer to talk first? Call <a href="tel:+15109009018" style="color:#7fc5ec">(510) 900-9018</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container prose-wrap">
+        <div class="form-card">
+          <form id="apply-form">
+            <div class="field">
+              <label for="role">Position</label>
+              <select name="role" id="role" required>
+                <option value="box-truck-fremont">Box Truck Driver — Fremont, CA · $28.00/hr</option>
+                <option value="box-truck-tracy">Box Truck Driver — Tracy, CA · $27.75/hr</option>
+                <option value="cdv-van-fremont">CDV / Sprinter Van Driver — Fremont, CA · $27.00/hr</option>
+                <option value="box-truck-helper-fremont">Box Truck Helper — Fremont, CA · $22.00/hr</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" autocomplete="given-name" required />
+              </div>
+              <div class="field">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" autocomplete="family-name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" autocomplete="tel" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Anything we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <textarea name="message" id="message" rows="3"></textarea>
+            </div>
+            <!-- Honeypot: humans never see or fill this -->
+            <div class="field" style="position:absolute;left:-9999px" aria-hidden="true">
+              <label for="company">Company</label>
+              <input type="text" name="company" id="company" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="sms-consent">
+              <input type="checkbox" name="sms_consent" id="sms_consent" value="yes" aria-describedby="sms-consent-text" />
+              <label for="sms_consent" id="sms-consent-text">By opting in for text messages, you agree to receive SMS messages containing account notifications and customer care messages from Bluejay Delivery LLC at the number provided. Message frequency may vary. Standard message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. View our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> for more information.</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Bluejay Delivery home">
+            <img src="assets/images/logo/logo-2.png" alt="Bluejay Delivery" loading="lazy" />
+          </a>
+          <p class="footer-tagline">Driven by excellence, fueled by trust. Last-mile and middle-mile logistics across California.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <ul>
+            <li><address>44051 Osgood Rd<br />Fremont, CA 94539</address></li>
+            <li><a href="tel:+15109009018">(510) 900-9018</a></li>
+            <li><a href="mailto:webform@bluejaydsp.com">webform@bluejaydsp.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span id="year"></span> Bluejay Delivery LLC. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

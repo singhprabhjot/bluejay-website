@@ -612,6 +612,16 @@ details.faq .faq-body p:last-child { margin-bottom: 0; }
   margin-bottom: 6px;
 }
 
+.field select {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
 .field input, .field textarea {
   width: 100%;
   font: inherit;
