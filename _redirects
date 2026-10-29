@@ -1,0 +1,8 @@
+# Pages removed or renamed in the 2026 redesign — 301 old URLs so
+# search results and external links (Indeed, Google Business) keep working.
+/job-dot-driver-lathrop.html  /job-dot-driver-tracy.html  301
+/about.html                   /#about                     301
+/contact.html                 /#contact                   301
+/index-2.html                 /                           301
+/index-3.html                 /                           301
+/blog*                        /                           301
