@@ -1,11 +1,13 @@
 (function () {
   "use strict";
 
-  // NAVI application intake. Leave endpoint empty until the API is deployed;
-  // submissions then fall back to EmailJS so no application is lost.
+  // NAVI application intake (contract: navi docs/website-apply-intake.md).
+  // The siteKey is publishable: it can only submit a Bluejay application.
+  // Until NAVI's release ships the route, requests fail and submissions
+  // fall back to EmailJS, so no application is lost either way.
   var NAVI_APPLY = {
-    endpoint: "", // e.g. "https://<api-id>.execute-api.us-west-2.amazonaws.com/public/apply"
-    siteKey: ""
+    endpoint: "https://api.navix.dev/public/apply",
+    siteKey: "navi_ak_01M62NE0WN4RV8P684BR5JQB6P_BJdraKk5oaIR-q-xptkXhxG5xAmgsP3z"
   };
 
   // Mobile navigation
