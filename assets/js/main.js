@@ -95,7 +95,7 @@
       if (sent) {
         applyForm.reset();
         status.className = "form-status ok";
-        status.textContent = "Application received — we'll get back to you, usually within one business day.";
+        status.textContent = "Application received — thank you! We'll be in touch.";
       } else {
         status.className = "form-status err";
         status.textContent = "Something went wrong. Please email your name, phone number, and the position to webform@bluejaydsp.com and we'll take it from there.";
