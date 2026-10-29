@@ -1,126 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Careers — Bluejay Delivery</title>
   <link rel="icon" href="assets/images/icon.png" type="image/png" />
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" />
-  <style>
-    :root{
-      --logo-h: 36px;       /* default header logo height */
-      --logo-h-md: 44px;    /* header logo on md+ */
-      --footer-logo-h: 28px;/* footer logo height */
-    }
-    /* HERO + CARDS */
-    .hero-careers{background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)),url('assets/images/slider/1.jpg') center/cover no-repeat; color:#fff}
-    .job-card{border-radius:16px; box-shadow:0 6px 24px rgba(0,0,0,.08);} 
-    .apply-btn{min-width:160px}
 
-    /* LOGO SIZING FIX */
-    .logo-img{height:var(--logo-h); width:auto; max-width:200px; object-fit:contain; display:block}
-    @media (min-width:768px){
-      .logo-img{height:var(--logo-h-md)}
-    }
-    .footer-logo{height:var(--footer-logo-h); width:auto; max-width:180px; object-fit:contain}
+  <title>Careers — Bluejay Delivery</title>
+  <meta name="description" content="Join Bluejay Delivery. Now hiring box truck drivers ($28/hr Fremont, $27.75/hr Tracy), CDV/Sprinter van drivers ($27/hr), and helpers ($22/hr). Benefits and paid training." />
+  <link rel="canonical" href="https://bluejaydsp.com/careers.html" />
 
-    /* Ensure the header doesn't stretch vertically due to image sizing */
-    header .container{min-height:56px}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/site.css" rel="stylesheet" />
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="py-3 border-bottom bg-white">
-    <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="d-inline-flex align-items-center gap-2 text-decoration-none" aria-label="Bluejay Delivery Home">
-        <img src="assets/images/logo/logo.png" alt="Bluejay Delivery" class="logo-img" />
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Bluejay Delivery home">
+        <img src="assets/images/logo/logo.png" alt="Bluejay Delivery" width="160" height="46" />
       </a>
-      <a class="btn btn-outline-primary" href="careers.html">All Careers</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="careers.html" aria-current="page">Careers</a></li>
+          <li><a href="index.html#contact" class="btn btn-primary">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero-careers py-5">
-    <div class="container py-4">
-      <h1 class="display-5 fw-bold">Join Bluejay Delivery</h1>
-      <p class="lead">Explore our open roles and apply on SmartRecruiters.</p>
-    </div>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Careers</span>
+        <h1>Join Bluejay Delivery</h1>
+        <p>Up to $28/hr with health benefits, 401(k) matching, and paid training — and pay posted up front for every role. Find your seat below and apply in minutes, or reach us at <a href="mailto:webform@bluejaydsp.com" style="color:#7fc5ec">webform@bluejaydsp.com</a>.</p>
+      </div>
+    </section>
 
-  <!-- Open Roles -->
-  <section id="open-roles" class="py-5 bg-light">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Fremont, CA</h2>
+          <p>Our home station — minutes off I-880 at 44051 Osgood Rd.</p>
+        </div>
+        <div class="role-grid">
+          <article class="role-card">
+            <span class="loc">Fremont, CA</span>
+            <h3>Box Truck Driver</h3>
+            <div class="pay">$28.00<small>/hour</small></div>
+            <p class="perks">No CDL required · Company truck · Paid training</p>
+            <a href="job-dot-driver-fremont.html" class="btn btn-outline">View Role</a>
+          </article>
+          <article class="role-card">
+            <span class="loc">Fremont, CA</span>
+            <h3>CDV / Sprinter Van Driver</h3>
+            <div class="pay">$27.00<small>/hour</small></div>
+            <p class="perks">Typically 60–65 stops a day · New vans</p>
+            <a href="job-van-driver.html" class="btn btn-outline">View Role</a>
+          </article>
+          <article class="role-card">
+            <span class="loc">Fremont, CA</span>
+            <h3>Box Truck Helper</h3>
+            <div class="pay">$22.00<small>/hour</small></div>
+            <p class="perks">18+ welcome · No license needed · We train you</p>
+            <a href="job-helpers.html" class="btn btn-outline">View Role</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container">
+        <div class="section-head">
+          <h2>Tracy, CA</h2>
+          <p>Serving the Central Valley — Lathrop, Manteca, Stockton, and beyond.</p>
+        </div>
+        <div class="role-grid">
+          <article class="role-card">
+            <span class="loc">Tracy, CA</span>
+            <h3>Box Truck Driver</h3>
+            <div class="pay">$27.75<small>/hour</small></div>
+            <p class="perks">Non-CDL · Dock-to-dock · Lift gate equipped</p>
+            <a href="job-dot-driver-tracy.html" class="btn btn-outline">View Role</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>What do the jobs pay?</summary>
+            <div class="faq-body">
+              <p>Pay is posted up front for every role: Box Truck Drivers earn $28.00/hr in Fremont and $27.75/hr in Tracy, CDV/Sprinter Van Drivers earn $27.00/hr, and Box Truck Helpers earn $22.00/hr. Shifts typically run 8–10 hours.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>Do I need a CDL or prior experience?</summary>
+            <div class="faq-body">
+              <p>No CDL — a regular driver's license is all you need for driver roles (held 3+ years, clean record), and helpers don't need a license at all. Van drivers start at 21+, box truck drivers at 23+, helpers at 18+. We provide classroom training and training routes, so no delivery experience is required for most roles.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>What benefits do you offer?</summary>
+            <div class="faq-body">
+              <p>Medical, dental, and vision insurance, 401(k) with company matching, paid time off, paid training, flexible schedules, and a referral program. Drivers also get a $125 Zappos credit for work shoes.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>What are the hours like?</summary>
+            <div class="faq-body">
+              <p>We run shifts around the clock, seven days a week, and a typical shift is 8–10 hours. Start times vary by role, route, and location — we'll go over the schedules currently available and confirm yours during hiring. Full-time is typically 4–5 days a week, part-time 2–3, and most roles ask for one weekend day.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>Where are you located?</summary>
+            <div class="faq-body">
+              <p>Our home station is at 44051 Osgood Rd, Fremont, CA 94539, with box truck routes also running out of Tracy, CA — convenient for candidates in Lathrop, Manteca, Stockton, Modesto, Livermore, and Pleasanton.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>How do I apply?</summary>
+            <div class="faq-body">
+              <p>Open the role you want above and hit Apply — it takes a few minutes. Questions first? Email <a href="mailto:webform@bluejaydsp.com">webform@bluejaydsp.com</a> or use the <a href="index.html#contact">contact form</a>.</p>
+            </div>
+          </details>
+        </div>
+        <p class="eeo">Bluejay Delivery LLC is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, age, disability, veteran status, or any other characteristic protected by law.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="h3">Open Roles</h2>
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Bluejay Delivery home">
+            <img src="assets/images/logo/logo-2.png" alt="Bluejay Delivery" loading="lazy" />
+          </a>
+          <p class="footer-tagline">Driven by excellence, fueled by trust. Last-mile and middle-mile logistics across California.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <ul>
+            <li><address>44051 Osgood Rd<br />Fremont, CA 94539</address></li>
+            <li><a href="mailto:webform@bluejaydsp.com">webform@bluejaydsp.com</a></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="row g-4">
-        <!-- Helpers -->
-        <div class="col-12">
-          <div class="job-card p-4 bg-white d-flex flex-column flex-md-row justify-content-between align-items-start">
-            <div>
-              <h3 class="h4 mb-2"><a href="job-helpers.html">Helpers</a></h3>
-              <p class="text-muted mb-0">Fremont, CA • Full‑time / Part‑time</p>
-            </div>
-            <a href="https://www.indeed.com/q-Bluejay-Delivery-Helper-jobs.html" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on Indeed</a>
-          </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span id="year"></span> Bluejay Delivery LLC. All rights reserved.</span>
         </div>
-
-        <!-- DOT Box Truck Drivers (Fremont) -->
-        <div class="col-12">
-          <div class="job-card p-4 bg-white d-flex flex-column flex-md-row justify-content-between align-items-start">
-            <div>
-              <h3 class="h4 mb-2"><a href="job-dot-driver-fremont.html">DOT Box Truck Drivers — Fremont</a></h3>
-              <p class="text-muted mb-0">Fremont, CA • Full‑time</p>
-            </div>
-            <a href="https://www.smartrecruiters.com/" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on SmartRecruiters</a>
-          </div>
-        </div>
-
-        <!-- DOT Box Truck Drivers (Lathrop) -->
-        <div class="col-12">
-          <div class="job-card p-4 bg-white d-flex flex-column flex-md-row justify-content-between align-items-start">
-            <div>
-              <h3 class="h4 mb-2"><a href="job-dot-driver-lathrop.html">DOT Box Truck Drivers — Lathrop</a></h3>
-              <p class="text-muted mb-0">Lathrop, CA • Full‑time</p>
-            </div>
-            <a href="https://www.smartrecruiters.com/" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on SmartRecruiters</a>
-          </div>
-        </div>
-
-        <!-- Van Drivers -->
-        <div class="col-12">
-          <div class="job-card p-4 bg-white d-flex flex-column flex-md-row justify-content-between align-items-start">
-            <div>
-              <h3 class="h4 mb-2"><a href="job-van-driver.html">Van Drivers</a></h3>
-              <p class="text-muted mb-0">Fremont, CA • Full‑time / Part‑time</p>
-            </div>
-            <a href="https://www.smartrecruiters.com/" target="_blank" class="btn btn-primary apply-btn mt-3 mt-md-0" rel="noopener">Apply on SmartRecruiters</a>
-          </div>
-        </div>
-
-        <!-- <!-- General Manager -->
-        <div class="col-12">
-          <div class="job-card p-4 bg-white d-flex flex-column flex-md-row justify-content-between align-items-start">
-            <div>
-              <h3 class="h4 mb-2"><a href="job-operation-manager.html">Operation Manager</a></h3>
-              <p class="text-muted mb-0">Manteca, CA • Full‑time</p>
-            </div>
-          </div>
-        </div> -->
-
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-top py-3">
-    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-      <a href="index.html" aria-label="Bluejay Delivery Home"><img src="assets/images/logo/logo.png" alt="Bluejay Delivery" class="footer-logo" /></a>
-      <span class="text-muted">© <script>document.write(new Date().getFullYear())</script> Bluejay Delivery</span>
     </div>
   </footer>
 
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
