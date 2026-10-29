@@ -93,10 +93,10 @@
       if (sent) {
         applyForm.reset();
         status.className = "form-status ok";
-        status.textContent = "Application received — we'll call you back, usually within one business day.";
+        status.textContent = "Application received — we'll get back to you, usually within one business day.";
       } else {
         status.className = "form-status err";
-        status.textContent = "Something went wrong. Please call us at (510) 900-9018 and we'll take your application over the phone.";
+        status.textContent = "Something went wrong. Please email your name, phone number, and the position to webform@bluejaydsp.com and we'll take it from there.";
       }
       button.disabled = false;
     });
